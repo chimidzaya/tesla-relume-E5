@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="mn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Model 3 — Дэлгэрэнгүй</title>
+  <meta name="description" content="Model 3: хувилбарууд, онцлог, аюулгүй байдал, техникийн үзүүлэлт.">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&family=Onest:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="model-3.css">
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="model-3.js" defer></script>
+</head>
+<body>
+
+  <!-- Loading veil (decorative) -->
+  <div class="veil" aria-hidden="true">
+    <svg class="veil__mark" viewBox="0 0 44 35" width="88" height="70">
+      <defs>
+        <clipPath id="veil-t">
+          <path d="M0 .1a9.7 9.7 0 0 0 7 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 0 0 7-7H0z"/>
+        </clipPath>
+      </defs>
+      <rect class="veil__ghost" width="44" height="35" clip-path="url(#veil-t)"/>
+      <rect class="veil__fill" width="44" height="0" clip-path="url(#veil-t)"/>
+    </svg>
+    <div class="veil__meter"><span></span></div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <a href="index.html" class="logo" aria-label="Нүүр хуудас">
+      <img src="assets/logos/logo-01-tesla-wordmark.svg" alt="Tesla" width="140" height="14">
+    </a>
+
+    <nav class="navbar__links" aria-label="Үндсэн цэс">
+      <a href="model-3.html" class="nav-link is-active" aria-current="page">Model 3</a>
+      <a href="#" class="nav-link">Model Y</a>
+      <a href="#" class="nav-link">Cybertruck</a>
+      <button type="button" class="nav-link nav-link--dropdown" aria-expanded="false">
+        Roadster
+        <img src="assets/chevron-down.svg" alt="" width="24" height="24">
+      </button>
+    </nav>
+
+    <a href="#order" class="navbar__cta">Захиалах</a>
+
+    <button type="button" class="menu-toggle" aria-label="Цэс" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="m3-hero surface-dark" data-stack>
+      <div class="stack-inner">
+        <div class="m3-hero__media">
+          <img class="m3-hero__bg" src="assets/model3/hero.jpg" alt="Цагаан Model 3 уулын замаар явж байна">
+        </div>
+        <canvas class="contour" data-tone="dark" aria-hidden="true"></canvas>
+        <div class="ramp ramp--top" aria-hidden="true"></div>
+        <div class="ramp ramp--bottom" aria-hidden="true"></div>
+
+        <div class="m3-hero__content">
+          <div class="m3-hero__main">
+            <div class="m3-hero__intro">
+              <p class="tagline">Спорт седан</p>
+              <h1 class="m3-hero__title">Model 3</h1>
+              <p class="meta-row">Хурдан, хол явдаг, зардал багатай цахилгаан седан.</p>
+            </div>
+
+            <dl class="hero-stats">
+              <div class="stat bracket">
+                <dt>Явах зай</dt>
+                <dd>517 <span class="unit">км</span></dd>
+              </div>
+              <div class="stat bracket">
+                <dt>0–97 км/ц</dt>
+                <dd>5.8 <span class="unit">с</span></dd>
+              </div>
+              <div class="stat bracket">
+                <dt>Ачааны багтаамж</dt>
+                <dd>680 <span class="unit">л</span></dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="m3-hero__actions">
+            <a href="#order" class="cut-btn">Захиалах</a>
+            <a href="#trims" class="cut-btn">Хувилбар харьцуулах</a>
+          </div>
+        </div>
+      </div>
+      <div class="stack-shade" aria-hidden="true"></div>
+    </section>
+
+    <!-- Trims -->
+    <section class="section surface-light section--trims" id="trims" data-stack>
+      <div class="stack-inner">
+        <canvas class="contour" data-tone="light" aria-hidden="true"></canvas>
+        <div class="container">
+          <div class="section-header">
+            <p class="tagline">Хувилбарууд</p>
+            <h2 class="h2">Өөрт тохирохоо сонго</h2>
+          </div>
+
+          <div class="trim-grid plate-group">
+            <article class="trim-card">
+              <div class="plate plate--trim"><img src="assets/model3/trim-standard.jpg" alt="Model 3" loading="lazy"></div>
+              <div class="trim-card__body">
+                <h3 class="card-title">Model 3</h3>
+                <p class="trim-card__price">$36,990-аас</p>
+                <ul class="trim-card__specs">
+                  <li class="stat-plate"><strong>517 км</strong> <span>явах зай</span></li>
+                  <li class="stat-plate"><strong>5.8 с</strong> <span>0–97 км/ц</span></li>
+                  <li class="stat-plate"><strong>680 л</strong> <span>ачаа</span></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="trim-card">
+              <div class="plate plate--trim"><img src="assets/model3/trim-premium.jpg" alt="Model 3 Premium" loading="lazy"></div>
+              <div class="trim-card__body">
+                <h3 class="card-title">Model 3 Premium</h3>
+                <p class="trim-card__price">$42,490-аас</p>
+                <ul class="trim-card__specs">
+                  <li class="stat-plate"><strong>557 км</strong> <span>явах зай</span></li>
+                  <li class="stat-plate"><strong>15 мин</strong> <span>→ 298 км цэнэг</span></li>
+                  <li class="stat-plate"><strong>AWD</strong> <span>хос мотор</span></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="trim-card">
+              <div class="plate plate--trim"><img src="assets/model3/trim-performance.jpg" alt="Model 3 Performance" loading="lazy"></div>
+              <div class="trim-card__body">
+                <h3 class="card-title">Model 3 Performance</h3>
+                <p class="trim-card__price">$54,990-аас</p>
+                <ul class="trim-card__specs">
+                  <li class="stat-plate"><strong>528 м.х.</strong> <span>хүч</span></li>
+                  <li class="stat-plate"><strong>2.9 с</strong> <span>0–97 км/ц</span></li>
+                  <li class="stat-plate"><strong>262 км/ц</strong> <span>дээд хурд</span></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="stack-shade" aria-hidden="true"></div>
+    </section>
+
+    <!-- Affordable -->
+    <section class="section surface-dark section--affordable" data-stack>
+      <div class="stack-inner">
+        <div class="container">
+          <div class="section-header">
+            <p class="tagline">Хамгийн хямд Tesla</p>
+            <h2 class="h2">Шилдэг боломж, бага зардал</h2>
+          </div>
+
+          <div class="feature-grid plate-group">
+            <article class="feature">
+              <div class="plate"><img src="assets/model3/design.jpg" alt="" loading="lazy"></div>
+              <h3 class="card-title">Энгийн дизайн</h3>
+              <p>Чанараа алдалгүй хямд. Тав тух, найдвартай байдалд төвлөрсөн.</p>
+            </article>
+            <article class="feature">
+              <div class="plate"><img src="assets/model3/efficient.jpg" alt="" loading="lazy"></div>
+              <h3 class="card-title">Хэмнэлттэй</h3>
+              <p>Цэнэглэх нь бензин хийхээс хямд. Нэг цэнэгээр аль болох хол явна.</p>
+            </article>
+            <article class="feature">
+              <div class="plate"><img src="assets/model3/maintenance.jpg" alt="" loading="lazy"></div>
+              <h3 class="card-title">Засвар бага</h3>
+              <p>Бензин хөдөлгүүргүй тул жилийн засвар үйлчилгээ бага.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="stack-shade" aria-hidden="true"></div>
+    </section>
+
+    <!-- Interior (last stacked layer) -->
+    <section class="section surface-light section--interior">
+      <div class="container">
+        <div class="section-header">
+          <p class="tagline">Салон</p>
+          <h2 class="h2">Хэрэгтэй бүхэн дотор нь</h2>
+        </div>
+
+        <div class="split-list plate-group">
+          <div class="split">
+            <div class="plate"><img src="assets/model3/comfort.jpg" alt="Model 3-ын салон" loading="lazy"></div>
+            <div class="split__text">
+              <h3 class="h3">Тав тухтай аялал</h3>
+              <p class="text-medium">Урд суудал, жолооны хүрд халаалттай. Салон бүхэлдээ чанартай материалтай.</p>
+            </div>
+          </div>
+          <div class="split split--reverse">
+            <div class="plate"><img src="assets/model3/control.jpg" alt="Мэдрэгч дэлгэц" loading="lazy"></div>
+            <div class="split__text">
+              <h3 class="h3">Бүрэн хяналт</h3>
+              <p class="text-medium">Суудлаа мэдрэгч дэлгэцээс тохируулна. Эргэлтийн дохионы бариултай.</p>
+            </div>
+          </div>
+          <div class="split">
+            <div class="plate"><img src="assets/model3/audio.jpg" alt="Аудио систем" loading="lazy"></div>
+            <div class="split__text">
+              <h3 class="h3">Сонсох таашаал</h3>
+              <p class="text-medium">7 чанга яригчтай. Дуут туслахаар дуу, жагсаалт тоглуулна.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="seam" data-from="light" data-to="dark" aria-hidden="true"><canvas></canvas></div>
+
+    <!-- Connected -->
+    <section class="section surface-dark section--connected">
+      <canvas class="dotgrid" aria-hidden="true"></canvas>
+      <div class="container">
+        <div class="section-header">
+          <p class="tagline">Tesla апп</p>
+          <h2 class="h2">Үргэлж холбоотой</h2>
+          <p class="text-medium">Машинаа утаснаасаа хаанаас ч удирд.</p>
+        </div>
+
+        <div class="connect-grid">
+          <article class="connect-card bracket">
+            <h3 class="panel-title">Алсын агааржуулалт</h3>
+            <p>Явахаас өмнө салоны дулааныг тохируул.</p>
+          </article>
+          <article class="connect-card bracket">
+            <h3 class="panel-title">Утас түлхүүр</h3>
+            <p>Ойртоход нээгдэнэ. Алсаас түгжиж, нээнэ.</p>
+          </article>
+          <article class="connect-card bracket">
+            <h3 class="panel-title">Тэжээвэр амьтны горим</h3>
+            <p>Таныг эзгүйд амьтныг тань тав тухтай байлгана.</p>
+          </article>
+          <article class="connect-card bracket">
+            <h3 class="panel-title">Хамгаалалтын горим</h3>
+            <p>Машин эзгүй үед орчноо хянана.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Safety -->
+    <section class="section surface-light section--safety">
+      <div class="container">
+        <div class="split split--wide plate-group">
+          <div class="plate"><img src="assets/model3/safety.jpg" alt="Model 3-ын аюулгүй байдал" loading="lazy"></div>
+          <div class="split__text">
+            <p class="tagline">Аюулгүй байдал</p>
+            <h2 class="h2">Таныг хамгаалахаар бүтээсэн</h2>
+            <p class="text-medium">Цохилт шингээх бүс, бат бөх их бие, олон аюулгүйн дэр зорчигчдыг хамгаална.</p>
+            <ul class="check-list">
+              <li>Урд мөргөлдөхөөс сэрэмжлүүлэх</li>
+              <li>Яаралтай автомат тоормос</li>
+              <li>Эгнээнээс гарахаас сэргийлэх</li>
+            </ul>
+            <p class="note bracket">Нэмэлтээр: <strong>Full Self-Driving (Supervised)</strong> — жолоочийн хяналттай жолоодлогын туслах.<sup>*</sup></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="seam" data-from="light" data-to="dark" aria-hidden="true"><canvas></canvas></div>
+
+    <!-- Power band -->
+    <section class="band surface-dark">
+      <canvas class="contour" data-tone="dark" aria-hidden="true"></canvas>
+      <div class="container band__inner">
+        <h2 class="h2">Хаана ч цахилгаан</h2>
+        <p class="text-medium">Машиныхаа батарейг зөөврийн цэнэглэгч болго. Tesla Outlet Adapter-аар<sup>*</sup> гэрэл, компьютер, хөргөгч, багаж ажиллуулна.</p>
+      </div>
+    </section>
+
+    <div class="seam" data-from="dark" data-to="light" aria-hidden="true"><canvas></canvas></div>
+
+    <!-- Specs -->
+    <section class="section surface-light section--specs" id="specs">
+      <div class="container">
+        <div class="section-header">
+          <p class="tagline">Үзүүлэлт</p>
+          <h2 class="h2">Техникийн үзүүлэлт</h2>
+        </div>
+
+        <div class="table-wrap">
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th scope="col"><span class="visually-hidden">Үзүүлэлт</span></th>
+                <th scope="col">Model 3</th>
+                <th scope="col">Premium</th>
+                <th scope="col">Performance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="spec-table__group"><th colspan="4" scope="colgroup">Хөдөлгөөн</th></tr>
+              <tr><th scope="row">Хөтлөгч</th><td>Арын дугуй</td><td>Хос мотор, AWD</td><td>Хос мотор, AWD</td></tr>
+              <tr><th scope="row">Явах зай (EPA)</th><td>517 км</td><td>557 км</td><td>509 км</td></tr>
+              <tr><th scope="row">0–97 км/ц</th><td>5.8 с</td><td>3.8 с</td><td>2.9 с</td></tr>
+              <tr><th scope="row">Дээд хурд</th><td>—</td><td>—</td><td>262 км/ц</td></tr>
+              <tr><th scope="row">Хүч</th><td>—</td><td>—</td><td>528 м.х.</td></tr>
+
+              <tr class="spec-table__group"><th colspan="4" scope="colgroup">Хэмжээ</th></tr>
+              <tr><th scope="row">Жин</th><td>1,705 кг</td><td>1,828 кг</td><td>1,839 кг</td></tr>
+              <tr><th scope="row">Ачаа</th><td>680 л</td><td>680 л</td><td>680 л</td></tr>
+              <tr><th scope="row">Суудал</th><td>5</td><td>5</td><td>5</td></tr>
+              <tr><th scope="row">Дугуй</th><td>18" / 19"</td><td>18" / 19"</td><td>20" Warp</td></tr>
+              <tr><th scope="row">Дэлгэц</th><td>16" урд</td><td>16" урд, 8" ард</td><td>16" урд, 8" ард</td></tr>
+              <tr><th scope="row">Урт</th><td>4,719 мм</td><td>4,719 мм</td><td>4,722 мм</td></tr>
+              <tr><th scope="row">Өргөн (толь эвхсэн / дэлгэсэн)</th><td>1,933 / 2,088 мм</td><td>1,933 / 2,088 мм</td><td>1,933 / 2,088 мм</td></tr>
+              <tr><th scope="row">Өндөр</th><td>1,440 мм</td><td>1,440 мм</td><td>1,430 мм</td></tr>
+              <tr><th scope="row">Газраас өндөр</th><td>137 мм</td><td>137 мм</td><td>127 мм</td></tr>
+
+              <tr class="spec-table__group"><th colspan="4" scope="colgroup">Цэнэглэлт</th></tr>
+              <tr><th scope="row">Supercharger дээд чадал</th><td>225 кВт</td><td>250 кВт</td><td>250 кВт</td></tr>
+              <tr><th scope="row">15 минутад нэмэгдэх зай<sup>*</sup></th><td>274 км</td><td>298 км</td><td>237 км</td></tr>
+
+              <tr class="spec-table__group"><th colspan="4" scope="colgroup">Баталгаа</th></tr>
+              <tr><th scope="row">Үндсэн</th><td>4 жил / 80,000 км</td><td>4 жил / 80,000 км</td><td>4 жил / 80,000 км</td></tr>
+              <tr><th scope="row">Батарей, хөдөлгүүр</th><td>8 жил / 160,000 км</td><td>8 жил / 193,000 км</td><td>8 жил / 193,000 км</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta surface-dark" id="order">
+      <img class="cta__bg" src="assets/model3/end.jpg" alt="" loading="lazy">
+      <div class="ramp ramp--top" aria-hidden="true"></div>
+      <div class="ramp ramp--bottom" aria-hidden="true"></div>
+      <div class="cta__content">
+        <h2 class="h2">Model 3-аа захиал</h2>
+        <p class="text-medium">Өнгө, дугуй, салоноо өөрөө сонго.</p>
+        <div class="cta__actions">
+          <a href="#" class="cut-btn">Захиалах</a>
+          <a href="#" class="cut-btn">Туршиж жолоодох</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footnotes (footer panel) -->
+    <section class="footnotes surface-dark">
+      <div class="footer-panel">
+        <div class="footer-panel__inner">
+          <canvas class="contour" data-tone="dark" aria-hidden="true"></canvas>
+          <div class="container">
+            <ul>
+              <li>Мэдээлэл, зураг: tesla.com (АНУ). Үнэ нь АНУ-ын зах зээлийнх.</li>
+              <li>Миль, фунт, инчийг метр систем рүү хөрвүүлсэн тул ойролцоо утга.</li>
+              <li>* FSD (Supervised) ашиглах үед жолооч үргэлж анхааралтай байх ёстой. Машиныг бие даан явагч болгохгүй.</li>
+              <li>* 15 минутын цэнэглэлтийг 105 км/ц тогтмол хурдаар тооцсон.</li>
+              <li>* Tesla Outlet Adapter тусдаа зарагдана.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

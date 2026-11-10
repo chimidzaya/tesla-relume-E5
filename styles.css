@@ -57,7 +57,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, p {
+h1, h2, h3, p {
   margin: 0;
 }
 
@@ -225,9 +225,12 @@ button {
 .logo {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 84px;
   height: 36px;
+}
+
+.logo img {
+  width: 140px;
+  height: auto;
 }
 
 .navbar__links {
