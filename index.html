@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Model 3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar / 2 -->
+  <header class="navbar">
+    <div class="navbar__container">
+      <div class="navbar__brand">
+        <a href="#" class="logo" aria-label="Home">
+          <img src="assets/logo.svg" alt="Logo" width="70" height="36">
+        </a>
+      </div>
+
+      <nav class="navbar__links" aria-label="Main">
+        <a href="#" class="nav-link">Model 3</a>
+        <a href="#" class="nav-link">Model Y</a>
+        <a href="#" class="nav-link">Cybertruck</a>
+        <button type="button" class="nav-link nav-link--dropdown" aria-expanded="false">
+          Roadster
+          <img src="assets/chevron-down.svg" alt="" width="24" height="24">
+        </button>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="#" class="btn btn--primary btn--sm">Button</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Header / 52 -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <img src="assets/hero.png" alt="">
+      </div>
+
+      <h1 class="hero__title">Model 3</h1>
+
+      <div class="container">
+        <div class="hero__content">
+          <div class="section-title">
+            <p class="tagline">Tagline</p>
+            <div class="hero__spacer"></div>
+          </div>
+
+          <div class="hero__actions">
+            <form class="signup-form" onsubmit="return false;">
+              <label class="visually-hidden" for="email">Email</label>
+              <input class="text-input" id="email" type="email" placeholder="Enter your email" required>
+              <button type="submit" class="btn btn--primary">Sign TT</button>
+            </form>
+            <p class="legal">
+              By clicking Sign Up you're confirming that you agree with our
+              <a href="#">Terms and Conditions</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layout / 652 -->
+    <section class="layout">
+      <div class="container">
+        <article class="card">
+          <div class="card__content">
+            <div class="card__text">
+              <div class="section-title">
+                <p class="tagline">Tagline</p>
+                <div class="card__heading">
+                  <h2 class="h2">Medium length section heading goes here</h2>
+                  <p class="text-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                </div>
+              </div>
+
+              <div class="stats">
+                <div class="stat">
+                  <p class="h2">50%</p>
+                  <p class="text-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="stat">
+                  <p class="h2">50%</p>
+                  <p class="text-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card__actions">
+              <a href="#" class="btn btn--secondary">Button</a>
+              <a href="#" class="btn btn--link">
+                Button
+                <img src="assets/chevron-right.svg" alt="" width="24" height="24">
+              </a>
+            </div>
+          </div>
+
+          <div class="lightbox">
+            <img class="lightbox__img" src="assets/lightbox.png" alt="">
+            <button type="button" class="lightbox__play" aria-label="Play video">
+              <img src="assets/play-button.svg" alt="" width="64" height="64">
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
